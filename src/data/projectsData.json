@@ -1,0 +1,27 @@
+[
+  {
+    "id": "arceLiberty",
+    "type": "Profesional",
+    "title": "ARCE LIBERTY LLC",
+    "technologies": ["HTML", "JavaScript", "CSS", "Diseño Responsivo"],
+    "images": ["/images/proyects/image.png", "/images/proyects/arceliberty_2.png"],
+    "projectLink": "https://www.arceliberty.com/"
+  },
+  {
+    "id": "eCommercePlatform",
+    "type": "Profesional",
+    "title": "Plataforma de E-commerce",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
+    "images": ["/images/proyects/ecommerce_1.png", "/images/proyects/ecommerce_2.png", "/images/proyects/ecommerce_3.png"],
+    "projectLink": "https://www.example.com/ecommerce"
+  },
+  {
+    "id": "aiChatbot",
+    "type": "Academico",
+    "title": "Aplicación de Chatbot con IA",
+    "technologies": ["Python", "Flask", "OpenAI API", "React", "WebSocket"],
+    "images": ["/images/proyects/chatbot_1.png"],
+    "projectLink": "https://www.example.com/chatbot"
+  }
+
+]

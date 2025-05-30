@@ -1,0 +1,63 @@
+{
+  "header": {
+    "home": "Inicio",
+    "professional": "Proyectos",
+    "conceptual": "Conceptual",
+    "academic": "Académico",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "open_search": "Abrir búsqueda",
+    "open_menu": "Abrir menú"
+  },
+  "home": {
+    "welcome_title": "¡Bienvenido a mi Portafolio!",
+    "description_part1": "Soy",
+    "my_name": "Paolo Navarro",
+    "software_engineer": "Ingeniero de Software",
+    "description_part2": "con especialización en",
+    "full_stack_dev": "desarrollo full-stack",
+    "description_part3": "y",
+    "scalable_architectures": "arquitecturas escalables",
+    "description_part4": "En este espacio encontrarás mis",
+    "professional_projects": "proyectos profesionales",
+    "open_source_contributions": "contribuciones open-source",
+    "description_part5": "y experimentos con",
+    "emerging_tech_experiments": "tecnologías emergentes",
+    "view_projects_button": "Ver mis proyectos"
+  },
+  "footer": {
+    "logo_alt_text": "Logo de Paolo Navarro",
+    "copyright_owner": "Paolo Navarro",
+    "all_rights_reserved": "Todos los derechos reservados",
+    "about_link": "Sobre mí",
+    "contact_link": "Contacto",
+    "privacy_policy_link": "Política de privacidad"
+  
+  }, 
+"projects": {
+       "professional_projects_title": "Proyectos Profesionales",
+    "view_project_button": "Ver Proyecto"
+  },
+  "arceLiberty": {
+      "description": [ 
+      { "type": "text", "value": "Desarrollo de sitio web profesional para una empresa de construcción, mostrando sus servicios, proyectos y métodos de contacto, optimizado para una " },
+      { "type": "highlight-secondary", "value": "excelente experiencia de usuario" },
+      { "type": "text", "value": " en cualquier dispositivo." }
+    ]
+  },
+  "eCommercePlatform": {
+         "description": [ 
+      { "type": "text", "value": "Una robusta plataforma de comercio electrónico con funcionalidades completas para la gestión de productos, carritos de compra y procesamiento de " },
+      { "type": "highlight-secondary", "value": "pagos seguros" },
+      { "type": "text", "value": ", diseñada para una escalabilidad óptima." }
+    ]
+  },
+  "aiChatbot": {
+"description": [ 
+      { "type": "text", "value": "Un chatbot inteligente impulsado por IA, capaz de entender el " },
+      { "type": "highlight-secondary", "value": "lenguaje natural" },
+      { "type": "text", "value": " y proporcionar respuestas relevantes en tiempo real, ideal para atención al cliente y soporte." }
+    ]
+
+  }
+}

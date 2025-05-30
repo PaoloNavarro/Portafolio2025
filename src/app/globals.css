@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
+/* Define tus variables CSS personalizadas aquí, dentro de un selector como :root */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #015491;
+  --color-secondary: #0c95bf;
+  --color-primary-hover: #014a7d;
+  --color-secondary-hover: #0a84a8;
+
+  /* Colores para el degradado del enlace activo y hover */
+  --header-link-gradient-start: var(--color-primary);
+  --header-link-gradient-end: var(--color-secondary);
+  --header-link-gradient-hover-end: var(--color-secondary-hover);
+
+  /* GENERAL TEXT COLORS FOR THEME SWITCHING */
+  --color-text: #212529; /* Default text color (dark for light mode) */
+  --color-background: #ffffff; /* Default background color (light for light mode) */
+
+
+  /* VARIABLES PARA TEXTOS DESTACADOS */
+  --color-highlight-primary: var(--color-primary);
+  --color-highlight-secondary: var(--color-secondary);
+
+  /* NUEVAS VARIABLES PARA GRADIENTE DEL FOOTER EN MODO CLARO */
+  --footer-gradient-start: var(--color-primary);
+  --footer-gradient-end: var(--color-secondary);
+  --footer-text-color: #f8f9fa; /* Specific for footer text in light mode (white) */
+  --footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --footer-icon-hover-bg: rgba(255, 255, 255, 0.2);
+  --footer-border-color: rgba(255, 255, 255, 0.2);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root.dark {
+  --color-primary: #1a5175;
+  --color-secondary: #0a7d9e;
+  --color-primary-hover: #14405a;
+  --color-secondary-hover: #086a82;
+
+  --header-link-gradient-start: var(--color-primary);
+  --header-link-gradient-end: var(--color-secondary);
+  --header-link-gradient-hover-end: var(--color-secondary-hover);
+
+  /* GENERAL TEXT COLORS FOR THEME SWITCHING IN DARK MODE */
+  --color-text: #e0e0e0; /* Text color for dark mode (light) */
+  --color-background: #121212; /* Background color for dark mode (dark) */
+
+
+  /* VARIABLES PARA TEXTOS DESTACADOS EN MODO OSCURO */
+  --color-highlight-primary: #82e2ff;
+  --color-highlight-secondary: #0ff;
+
+  /* NUEVAS VARIABLES PARA GRADIENTE DEL FOOTER EN MODO OSCURO */
+  --footer-gradient-start: #1e1e1e; /* Consider a slightly darker start */
+  --footer-gradient-end: #121212; /* And darker end for background */
+  --footer-text-color: #e0e0e0; /* Specific for footer text in dark mode (light) */
+  --footer-icon-bg: rgba(255, 255, 255, 0.05);
+  --footer-icon-hover-bg: rgba(255, 255, 255, 0.1);
+  --footer-border-color: rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* NUEVO: Color de fondo por defecto para el body */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background); /* Use the general background variable */
+  color: var(--color-text); /* Use the general text variable */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Nuevo CSS para el logo */
+header .relative img {
+  filter: none;
+  transition: filter 0.3s ease-in-out;
+}
+
+:root.dark header .relative img {
+  filter: brightness(0) invert(1);
+}
+
+/* --- NUEVAS CLASES PARA TEXTOS DESTACADOS --- */
+.highlight-primary {
+  color: var(--color-highlight-primary);
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.highlight-secondary {
+  color: var(--color-highlight-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+/* --- FIN NUEVAS CLASES --- */
+
+/* Usando la directiva @theme para configurar el tema */
+@theme {
+  --color-primary: #015491;
+  --color-secondary: #0c95bf;
+  --color-primary-hover: #014a7d;
+  --color-secondary-hover: #0a84a8;
+
+  @keyframes gradientShift {
+    from {
+      background-position: 0% 50%;
+    }
+    to {
+      background-position: 100% 50%;
+    }
+  }
 }

@@ -1,0 +1,62 @@
+{
+  "header": {
+    "home": "Home",
+    "professional": "Proyects",
+    "conceptual": "Conceptual",
+    "academic": "Academic",
+    "about": "About me",
+    "contact": "Contact",
+    "open_search": "Open search",
+    "open_menu": "Open menu"
+  },
+  "home": {
+    "welcome_title": "Welcome to my Portfolio!",
+    "description_part1": "I am",
+    "my_name": "Paolo Navarro",
+    "software_engineer": "Software Engineer",
+    "description_part2": "specializing in",
+    "full_stack_dev": "full-stack development",
+    "description_part3": "and",
+    "scalable_architectures": "scalable architectures",
+    "description_part4": "In this space, you will find my",
+    "professional_projects": "professional projects",
+    "open_source_contributions": "open-source contributions",
+    "description_part5": "and experiments with",
+    "emerging_tech_experiments": "emerging technologies",
+    "view_projects_button": "View my projects"
+  },
+  "footer": {
+    "logo_alt_text": "Paolo Navarro Logo",
+    "copyright_owner": "Paolo Navarro",
+    "all_rights_reserved": "All rights reserved",
+    "about_link": "About me",
+    "contact_link": "Contact",
+    "privacy_policy_link": "Privacy Policy"
+  },
+   "projects": {
+    "professional_projects_title": "Professional Projects",
+    "view_project_button": "View Project"
+  },
+  "arceLiberty": {
+    "description": [
+      { "type": "text", "value": "Professional website development for a construction company, showcasing their services, projects, and contact methods, optimized for an " },
+      { "type": "highlight-secondary", "value": "excellent user experience" },
+      { "type": "text", "value": " on any device." }
+    ]
+  },
+  "eCommercePlatform": {
+    "description": [
+      { "type": "text", "value": "A robust e-commerce platform with complete functionalities for product management, shopping carts, and " },
+      { "type": "highlight-secondary", "value": "secure payment processing" },
+      { "type": "text", "value": ", designed for optimal scalability." }
+    ]
+  },
+  "aiChatbot": {
+    "description": [
+      { "type": "text", "value": "An intelligent AI-powered chatbot application capable of understanding " },
+      { "type": "highlight-secondary", "value": "natural language" },
+      { "type": "text", "value": " and providing real-time relevant answers, ideal for customer service and support." }
+    ]
+  }
+}
+
