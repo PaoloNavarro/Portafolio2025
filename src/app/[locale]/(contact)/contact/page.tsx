@@ -40,28 +40,28 @@ const ContactSection: React.FC = () => {
     }
   };
 
-  const validateForm = () => {
-    let newErrors: { name?: string; email?: string; message?: string } = {};
-    if (!formData.name.trim()) {
-      newErrors.name = t('contact.validation.name_required');
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = t('contact.validation.email_required');
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = t('contact.validation.email_invalid');
-    }
-    if (!formData.message.trim()) {
-      newErrors.message = t('contact.validation.message_required');
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+//   const validateForm = () => {
+//     let newErrors: { name?: string; email?: string; message?: string } = {};
+//     if (!formData.name.trim()) {
+//       newErrors.name = t('contact.validation.name_required');
+//     }
+//     if (!formData.email.trim()) {
+//       newErrors.email = t('contact.validation.email_required');
+//     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+//       newErrors.email = t('contact.validation.email_invalid');
+//     }
+//     if (!formData.message.trim()) {
+//       newErrors.message = t('contact.validation.message_required');
+//     }
+//     setErrors(newErrors);
+//     return Object.keys(newErrors).length === 0;
+//   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) {
-      return;
-    }
+    // if (!validateForm()) {
+    //   return;
+    // }
 
     setStatus('loading');
     try {

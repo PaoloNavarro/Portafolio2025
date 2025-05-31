@@ -6,7 +6,6 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from '@/i18n/client';
-import { useTheme } from '@/hooks/useTheme'; // Assuming you have this hook to read theme
 
 interface MenuSliderProps {
   isOpen: boolean;

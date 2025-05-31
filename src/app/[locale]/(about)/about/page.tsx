@@ -4,7 +4,6 @@
 import React from 'react';
 import { useTranslation } from '@/i18n/client';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 
 const sectionVariants = {
@@ -17,10 +16,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
-const badgeVariants = {
-  hover: { scale: 1.05, transition: { duration: 0.2 } },
-  initial: { scale: 1 },
-};
+
 
 const AboutMeSection: React.FC = () => {
   const pathname = usePathname();
