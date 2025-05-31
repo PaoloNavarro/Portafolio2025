@@ -31,32 +31,151 @@
     "all_rights_reserved": "All rights reserved",
     "about_link": "About me",
     "contact_link": "Contact",
-    "privacy_policy_link": "Privacy Policy"
+    "privacy_policy_link": "Privacy Policy",
+    "view_details_button": "View Details",
+    "view_live_button": "View Live"
   },
-   "projects": {
+  "projects": {
     "professional_projects_title": "Professional Projects",
     "view_project_button": "View Project"
   },
   "arceLiberty": {
     "description": [
-      { "type": "text", "value": "Professional website development for a construction company, showcasing their services, projects, and contact methods, optimized for an " },
-      { "type": "highlight-secondary", "value": "excellent user experience" },
-      { "type": "text", "value": " on any device." }
+      {
+        "type": "text",
+        "value": "Professional website development for a construction company, showcasing their services, projects, and contact methods, optimized for an "
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "excellent user experience"
+      },
+      {
+        "type": "text",
+        "value": " on any device."
+      }
     ]
   },
-  "eCommercePlatform": {
+  "Software": {
     "description": [
-      { "type": "text", "value": "A robust e-commerce platform with complete functionalities for product management, shopping carts, and " },
-      { "type": "highlight-secondary", "value": "secure payment processing" },
-      { "type": "text", "value": ", designed for optimal scalability." }
+      {
+        "type": "text",
+        "value": "Inventory management system developed using Laravel, featuring complete modules for purchase, sales, and stock control."
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "Project designed for a generic hardware store"
+      },
+      {
+        "type": "text",
+        "value": ", offering extensive customization and flexibility to meet the specific needs of the business."
+      }
     ]
   },
-  "aiChatbot": {
+  "apiMovie": {
     "description": [
-      { "type": "text", "value": "An intelligent AI-powered chatbot application capable of understanding " },
-      { "type": "highlight-secondary", "value": "natural language" },
-      { "type": "text", "value": " and providing real-time relevant answers, ideal for customer service and support." }
+      {
+        "type": "text",
+        "value": "Consumption of a local API developed in Laravel and a public OMDb API, integrating and displaying data from both sources."
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "Academic project demonstrating API integration"
+      },
+      {
+        "type": "text",
+        "value": " using modern web development technologies."
+      }
     ]
+  },
+  "project_detail": {
+    "back_to_projects": "Back to Projects",
+    "loading_or_not_found": "Loading project or project not found...",
+    "no_image_available": "No image available",
+    "description_title": "About This Project",
+    "no_description_available": "No detailed description available for this project.",
+    "technologies_title": "Technologies Used",
+    "view_live_project": "View Live Project"
+  },
+  "menu": {
+    "navigation_title": "Menu Navigation"
+  },
+  "aboutMe": {
+    "title": "A Glimpse into My Journey",
+    "summaryHeading": "Professional Summary",
+    "summaryPart1": "I am a",
+    "summaryHighlight1": "Software Development Engineer",
+    "summaryPart2": "with full-stack development experience and a strong commitment to continuous improvement. I specialize in building modern and functional digital solutions with",
+    "summaryHighlight2": "PHP (Laravel), JavaScript (React), and C#",
+    "summaryPart3": ", and I am currently expanding my knowledge in technologies such as",
+    "summaryHighlight3": "Next.js, React Native, and Flutter",
+    "summaryPart4": ". I have a great interest in participating in projects that generate a real impact on institutional and administrative processes. I consider myself a",
+    "summaryHighlight4": "self-managed, responsible, and highly adaptable learner",
+    "summaryPart5": ".",
+    "techSkillsHeading": "Technical Skills",
+    "skill1": "Development with languages like PHP, JavaScript, Java, C#",
+    "skill2": "Development with frameworks like Laravel, Spring Boot, .NET Framework",
+    "skill3": "Proficiency in libraries like ReactJS",
+    "skill4": "Proficiency in Git and GitHub, Linux, Docker",
+    "skill5": "Knowledge of agile development methodologies like Scrum",
+    "skill6": "Knowledge of Rest-APIs",
+    "skill7": "Knowledge of MySQL, PostgreSQL, Oracle",
+    "skill8": "Basic English language proficiency",
+    "softSkillsHeading": "Soft Skills",
+    "softSkill1": "Teamwork",
+    "softSkill2": "Adaptability",
+    "softSkill3": "Ethics",
+    "softSkill4": "Responsibility",
+    "contactHeading": "Contact",
+    "phone": "Phone",
+    "phoneNumber": "6435 5641",
+    "email": "Email",
+    "emailAddress": "navarropaolo2020@gmail.com",
+    "location": "Location",
+    "locationValue": "Ciudad Arce, La Libertad, El Salvador",
+    "githubLink": "https://github.com/PaoloNavarro",
+    "githubUser": "PaoloNavarro",
+    "experienceHeading": "Experience",
+    "idgDates": "2024-2025",
+    "idgRole": "Fullstack Developer - Idigital Studios",
+    "idgDuty1": "Development of custom solutions for sectors such as hardware stores, universities, and businesses.",
+    "idgDuty2": "Integration of payment gateways, SMTP clients, and REST APIs.",
+    "idgDuty3": "Development with Laravel, API consumption in React, and templating with WordPress + Elementor.",
+    "idgDuty4": "Creation of custom WordPress plugins and WooCommerce optimization.",
+    "idgDuty5": "Work under agile methodologies (Scrum).",
+    "idgDuty6": "Management of relational and non-relational databases.",
+    "ferreteriaDates": "2023 - 2024",
+    "ferreteriaRole": "Developer - Ferretería Hernández, Chalchuapa",
+    "ferreteriaDuty1": "Design and implementation of an inventory and sales management system adapted to business needs.",
+    "ferreteriaDuty2": "Backend development with Laravel and MySQL database.",
+    "educationHeading": "Education",
+    "universityDegree": "Software Development Engineering",
+    "universityDates": "2020-2024",
+    "coursesHeading": "Courses",
+    "course1": "Git and GitHub on Platzi",
+    "course1Date": "2022",
+    "course2": "PHP with Laravel on Platzi",
+    "course2Date": "2022"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "I'd love to hear from you! Whether you have a question, a project proposal, or just want to say hi, feel free to use the form below.",
+    "form": {
+      "name_label": "Your Name",
+      "name_placeholder": "Enter your full name",
+      "email_label": "Your Email",
+      "email_placeholder": "your.email@example.com",
+      "message_label": "Your Message",
+      "message_placeholder": "Hi, I'd like to discuss...",
+      "submit_button": "Send Message",
+      "sending": "Sending...",
+      "success_message": "Message sent successfully! I'll get back to you soon.",
+      "error_message": "There was an error sending your message. Please try again."
+    },
+    "validation": {
+      "name_required": "Name is required.",
+      "email_required": "Email is required.",
+      "email_invalid": "Please enter a valid email address.",
+      "message_required": "Message is required."
+    }
   }
 }
-

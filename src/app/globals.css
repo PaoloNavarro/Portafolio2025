@@ -105,3 +105,42 @@ header .relative img {
     }
   }
 }
+/* --- ANIMATED BORDER EFFECT FOR SECTIONS --- */
+.animated-border-box {
+  position: relative;
+  z-index: 0; /* Ensures content is above the pseudo-element border */
+}
+
+.animated-border-box::before {
+  content: '';
+  position: absolute;
+  top: -2px; /* Adjust to control border thickness */
+  left: -2px; /* Adjust to control border thickness */
+  right: -2px; /* Adjust to control border thickness */
+  bottom: -2px; /* Adjust to control border thickness */
+  border-radius: inherit; /* Inherit border-radius from the parent */
+  background: transparent;
+  z-index: -1;
+  transition: background 0.3s ease-in-out; /* Smooth transition for background on hover */
+}
+
+.animated-border-box:hover::before {
+  /* This creates the animated gradient border effect with custom hex colors */
+  background: linear-gradient(
+    45deg,
+    #de62c7, /* Custom Hex Color 1 (e.g., your original primary blue) */
+    #0c95bf, /* Custom Hex Color 2 (e.g., your original secondary blue) */
+    #015491, /* Custom Hex Color 1 */
+    #de62c7  /* Custom Hex Color 2 */
+  );
+  background-size: 200% 200%;
+  animation: gradientBorderShift 3s ease infinite;
+  border-color: transparent; /* Hide the solid border when gradient is active */
+}
+
+/* Keyframe for the gradient border animation */
+@keyframes gradientBorderShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

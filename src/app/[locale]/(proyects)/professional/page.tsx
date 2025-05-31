@@ -11,6 +11,23 @@ import { usePathname } from 'next/navigation';
 import projectsData from '@/data/projectsData.json';
 
 // -----------------------------------------------------------------------------
+// Define el objeto que mapea el nombre de la tecnología con su ruta de logo
+// IMPORTANTE: Asegúrate de que los archivos SVG en estas rutas sean de color BLANCO.
+// -----------------------------------------------------------------------------
+const technologyLogos: Record<string, string> = {
+  "HTML": "/images/tech-logos/html.svg",
+  "CSS": "/images/tech-logos/css.svg",
+  "JavaScript": "/images/tech-logos/javascript.svg",
+  "Diseño Responsivo": "/images/tech-logos/responsive.svg",
+  "Laravel": "/images/tech-logos/laravel.svg",
+  "Bootstrap": "/images/tech-logos/bootstrap.svg",
+  "jQuery": "/images/tech-logos/jquery.svg",
+  "MySQL": "/images/tech-logos/mysql.svg",
+  "PHP": "/images/tech-logos/php.svg",
+  "React": "/images/tech-logos/react.svg",
+};
+
+// -----------------------------------------------------------------------------
 // Tipado para un segmento de la descripción
 // -----------------------------------------------------------------------------
 interface DescriptionSegment {
@@ -19,11 +36,11 @@ interface DescriptionSegment {
 }
 
 // -----------------------------------------------------------------------------
-// Tipado para un proyecto individual (sin cambios aquí, 'type' sigue existiendo en el JSON de datos)
+// Tipado para un proyecto individual
 // -----------------------------------------------------------------------------
 interface Project {
   id: string;
-  type: string; // Todavía existe en projectsData.json, solo no lo mostraremos
+  type: string;
   title: string;
   technologies: string[];
   images: string[];
@@ -35,17 +52,15 @@ interface Project {
 // -----------------------------------------------------------------------------
 interface ProjectCardProps {
   project: Project;
-  description: DescriptionSegment[]; // La descripción ES un array de segmentos
-  t: (key: string) => string; // Función de traducción para el botón
+  description: DescriptionSegment[];
+  t: (key: string) => string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, description, t }) => {
-  // Puedes eliminar este console.log una vez que todo funcione
-  // console.log(`Project: ${project.id}, Description Type: ${typeof description}, Description Value:`, description);
-
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   const totalImages = project.images.length;
+  const pathname = usePathname();
+  const lng = pathname.split('/')[1]; // Obtiene el idioma actual
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
@@ -56,22 +71,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, description, t }) =>
   };
 
   return (
-    <div className="bg-[var(--color-background-dark)] rounded-lg shadow-xl overflow-hidden
+    <div className="project-card-light-effect bg-[var(--color-background-dark)] rounded-lg shadow-xl overflow-hidden
                     transform transition-transform duration-300 hover:scale-105
-                    border border-[var(--color-background-dark)] hover:border-[var(--color-primary)]">
+                    border border-[var(--color-background-dark)] hover:border-[var(--color-primary)] flex flex-col relative group"> {/* Added project-card-light-effect and group */}
       <div className="relative h-48 w-full">
         {/* Carrusel de imágenes */}
         {totalImages > 0 ? (
           <>
             <Image
-              src={project.images[currentImageIndex]}
+              src={project.images?.[currentImageIndex] || ''}
               alt={`Captura de pantalla del proyecto ${project.title} - ${currentImageIndex + 1}`}
               layout="fill"
               objectFit="cover"
               className="rounded-t-lg transition-opacity duration-300 ease-in-out"
-              key={currentImageIndex} // Key para forzar la re-renderización y animación
+              key={currentImageIndex}
             />
-            {totalImages > 1 && ( // Mostrar botones solo si hay más de una imagen
+            {totalImages > 1 && (
               <>
                 <button
                   onClick={prevImage}
@@ -104,9 +119,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, description, t }) =>
           </div>
         )}
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold text-[var(--color-text)] mb-2">{project.title}</h3>
-        <p className="text-[var(--color-text-light)] mb-4 leading-relaxed">
+        <p className="text-[var(--color-text-light)] mb-4 leading-relaxed flex-grow">
           {description.map((segment, index) => (
             <span
               key={index}
@@ -116,26 +131,58 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, description, t }) =>
             </span>
           ))}
         </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="bg-[var(--color-primary)]/[0.1] text-[var(--color-primary)] px-3 py-1 rounded-full text-sm"
-            >
-              {tech}
-            </span>
-          ))}
+        <div className="flex flex-wrap gap-3 mb-4 items-center justify-center">
+          {project.technologies.map((techName, index) => {
+            const logoPath = technologyLogos[techName];
+
+            return logoPath ? (
+              <div
+                key={index}
+                className="flex items-center justify-center bg-[var(--color-secondary)] p-1 rounded-full group relative"
+              >
+                <Image
+                  src={logoPath}
+                  alt={techName}
+                  width={24}
+                  height={24}
+                  className="object-contain"
+                />
+                <span className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 pointer-events-none whitespace-nowrap">
+                  {techName}
+                </span>
+              </div>
+            ) : (
+              <span
+                key={index}
+                className="bg-[var(--color-primary)]/[0.1] text-[var(--color-primary)] px-3 py-1 rounded-full text-sm"
+              >
+                {techName}
+              </span>
+            );
+          })}
         </div>
-        <Link
-          href={project.projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-5 py-2 rounded-md
-                     shadow-md hover:shadow-lg transition-all duration-300 hover:from-primary/90 hover:to-secondary/90
-                     text-base font-medium"
-        >
-          {t('projects.view_project_button')}
-        </Link>
+        <div className="flex justify-center items-center mt-auto flex-wrap"> {/* Changed justify-start to justify-center and added flex-wrap */}
+          <Link
+            href={`/${lng}/professional/${project.id}`}
+            className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-5 py-2 rounded-md
+                      shadow-md hover:shadow-lg transition-all duration-300 hover:from-primary/90 hover:to-secondary/90
+                      text-base font-medium text-center min-w-[140px] mb-2 md:mb-0" // Added mb-2 for spacing on small screens
+          >
+            {t('projects.view_details_button')}
+          </Link>
+          {project.projectLink && (
+            <Link
+              href={project.projectLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-[var(--color-primary)] text-[var(--color-primary)] px-5 py-2 rounded-md
+                          shadow-md hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300
+                          text-base font-medium md:ml-2 text-center min-w-[140px]" // Changed ml-2 to md:ml-2 to allow wrapping
+            >
+              {t('projects.view_live_button')}
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -147,9 +194,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, description, t }) =>
 const ProfessionalProjectsPage: React.FC = () => {
   const pathname = usePathname();
   const lng = pathname.split('/')[1];
-  // AQUÍ ESTÁ EL CAMBIO CLAVE: returnObjects: true
-  const { t } = useTranslation(lng, 'projects'); // No necesitamos returnObjects: true aquí para el hook en sí,
-                                                // pero sí para la llamada individual a t() si el hook no está configurado globalmente.
+  const { t } = useTranslation(lng, 'projects');
+
+  const adjustedProjectsData = projectsData.map(project => {
+    if (project.id === 'apiMovie' && !project.technologies.includes('PHP')) {
+      return { ...project, technologies: [...project.technologies, 'PHP'] };
+    }
+    return project;
+  });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-8 md:p-24">
@@ -161,12 +213,10 @@ const ProfessionalProjectsPage: React.FC = () => {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project) => (
+          {adjustedProjectsData.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
-              // PASAMOS returnObjects: true DIRECTAMENTE EN LA LLAMADA A t()
-              // También removemos la aserción a 'unknown' ya que i18next debería devolver el tipo correcto
               description={t(`${project.id}.description`, { returnObjects: true }) as DescriptionSegment[]}
               t={t}
             />

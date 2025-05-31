@@ -1,27 +1,65 @@
 [
+ 
   {
+    "id": "Software",
+    "type": "Profesional",
+    "title": "FERRETERIA",
+    "technologies": [
+      "Laravel",
+      "Bootstrap",
+      "jQuery",
+      "MySQL",
+            "PHP",
+            "CSS"
+
+    ],
+    "images": [
+      "/images/proyects/image5.png",
+      "/images/proyects/image6.png",
+      "/images/proyects/image7.png",
+      "/images/proyects/image8.png",
+      "/images/proyects/image9.png"
+    ],
+    "projectLink": "https://inentariolaravel30-production.up.railway.app/"
+  },
+   {
     "id": "arceLiberty",
     "type": "Profesional",
     "title": "ARCE LIBERTY LLC",
-    "technologies": ["HTML", "JavaScript", "CSS", "Diseño Responsivo"],
-    "images": ["/images/proyects/image.png", "/images/proyects/arceliberty_2.png"],
+    "technologies": [
+      "HTML",
+      "JavaScript",
+      "CSS",
+      "Diseño Responsivo"
+    ],
+    "images": [
+      "/images/proyects/image.png",
+      "/images/proyects/image2.png",
+      "/images/proyects/image3.png",
+      "/images/proyects/image4.png"
+    ],
     "projectLink": "https://www.arceliberty.com/"
   },
   {
-    "id": "eCommercePlatform",
-    "type": "Profesional",
-    "title": "Plataforma de E-commerce",
-    "technologies": ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
-    "images": ["/images/proyects/ecommerce_1.png", "/images/proyects/ecommerce_2.png", "/images/proyects/ecommerce_3.png"],
-    "projectLink": "https://www.example.com/ecommerce"
-  },
-  {
-    "id": "aiChatbot",
+    "id": "apiMovie",
     "type": "Academico",
-    "title": "Aplicación de Chatbot con IA",
-    "technologies": ["Python", "Flask", "OpenAI API", "React", "WebSocket"],
-    "images": ["/images/proyects/chatbot_1.png"],
-    "projectLink": "https://www.example.com/chatbot"
+    "title": "ApiMovie",
+    "technologies": [
+      "JavaScript",
+      "PHP",
+      "React",
+      "Laravel",
+      "MySQL",
+      "CSS",
+      "Bootstrap",
+      "HTML"
+    ],
+     "images": [
+      "/images/proyects/image10.png",
+      "/images/proyects/image11.png",
+      "/images/proyects/image12.png",
+      "/images/proyects/image13.png"
+    ],
+    "projectLink": "https://github.com/PaoloNavarro/InentarioLaravel3.0"
   }
-
 ]

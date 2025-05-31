@@ -32,32 +32,150 @@
     "about_link": "Sobre mí",
     "contact_link": "Contacto",
     "privacy_policy_link": "Política de privacidad"
-  
-  }, 
-"projects": {
-       "professional_projects_title": "Proyectos Profesionales",
-    "view_project_button": "Ver Proyecto"
+  },
+  "projects": {
+    "professional_projects_title": "Proyectos Profesionales",
+    "view_project_button": "Ver Proyecto",
+    "view_details_button": "Ver Detalles",
+    "view_live_button": "Ver en vivo"
   },
   "arceLiberty": {
-      "description": [ 
-      { "type": "text", "value": "Desarrollo de sitio web profesional para una empresa de construcción, mostrando sus servicios, proyectos y métodos de contacto, optimizado para una " },
-      { "type": "highlight-secondary", "value": "excelente experiencia de usuario" },
-      { "type": "text", "value": " en cualquier dispositivo." }
+    "description": [
+      {
+        "type": "text",
+        "value": "Desarrollo de sitio web profesional para una empresa de construcción, mostrando sus servicios, proyectos y métodos de contacto, optimizado para una "
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "excelente experiencia de usuario"
+      },
+      {
+        "type": "text",
+        "value": " en cualquier dispositivo."
+      }
     ]
   },
-  "eCommercePlatform": {
-         "description": [ 
-      { "type": "text", "value": "Una robusta plataforma de comercio electrónico con funcionalidades completas para la gestión de productos, carritos de compra y procesamiento de " },
-      { "type": "highlight-secondary", "value": "pagos seguros" },
-      { "type": "text", "value": ", diseñada para una escalabilidad óptima." }
+  "Software": {
+    "description": [
+      {
+        "type": "text",
+        "value": "Sistema de inventariado desarrollado utilizando Laravel, con módulos completos para la gestión de compras, ventas y control de stock."
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "Proyecto diseñado para una ferretería genérica"
+      },
+      {
+        "type": "text",
+        "value": ", que ofrece una amplia personalización y adaptabilidad para ajustarse a las necesidades específicas del negocio."
+      }
     ]
   },
-  "aiChatbot": {
-"description": [ 
-      { "type": "text", "value": "Un chatbot inteligente impulsado por IA, capaz de entender el " },
-      { "type": "highlight-secondary", "value": "lenguaje natural" },
-      { "type": "text", "value": " y proporcionar respuestas relevantes en tiempo real, ideal para atención al cliente y soporte." }
+  "apiMovie": {
+    "description": [
+      {
+        "type": "text",
+        "value": "Consumo de una API local desarrollada en Laravel y una API pública OMDb, integrando y mostrando datos de ambas fuentes."
+      },
+      {
+        "type": "highlight-secondary",
+        "value": "Proyecto académico que demuestra integración de APIs"
+      },
+      {
+        "type": "text",
+        "value": " utilizando tecnologías modernas de desarrollo web."
+      }
     ]
+  },
 
+   "project_detail": {
+    "back_to_projects": "Volver a Proyectos",
+    "loading_or_not_found": "Las imagenes del proyecto se están cargando o el proyecto no se encontró...",
+    "no_image_available": "No hay imagen disponible",
+    "description_title": "Sobre Este Proyecto",
+    "no_description_available": "No hay detalles sobre este proyecto.",
+    "technologies_title": "Tecnologías Utilizadas",
+    "view_live_project": "Ver Proyecto en Vivo"
+  },
+   "menu" : {
+    "navigation_title": "Menu de Navegación"
+  }	, "aboutMe": {
+    "title": "Un Vistazo a Mi Trayectoria",
+    "summaryHeading": "Resumen Profesional",
+    "summaryPart1": "Soy un",
+    "summaryHighlight1": "Ingeniero en Desarrollo de Software ",
+    "summaryPart2": "con experiencia en desarrollo fullstack y un fuerte compromiso por la mejora continua. Me especializo en construir soluciones digitales modernas y funcionales con",
+    "summaryHighlight2": "PHP (Laravel), JavaScript (React), y C#",
+    "summaryPart3": ", y actualmente me encuentro ampliando mis conocimientos en tecnologías como",
+    "summaryHighlight3": "Next.js, React Native y Flutter",
+    "summaryPart4": ". Poseo un gran interés en participar en proyectos que generen impacto real en procesos institucionales y administrativos. Me considero una persona",
+    "summaryHighlight4": "autogestionada, responsable y con alta capacidad de aprendizaje",
+    "summaryPart5": ".",
+    "techSkillsHeading": "Habilidades Técnicas",
+    "skill1": "Desarrollo con lenguajes como PHP, JavaScript, Java, C#",
+    "skill2": "Desarrollo con frameworks como Laravel, Spring Boot, .NET Framework",
+    "skill3": "Conocimiento en bibliotecas como ReactJS",
+    "skill4": "Conocimiento en Git y GitHub, Linux, Docker",
+    "skill5": "Conocimiento en metodologías de desarrollo ágil como Scrum",
+    "skill6": "Conocimiento en Rest-APIs",
+    "skill7": "Conocimiento en MySQL, PostgreSQL, Oracle",
+    "skill8": "Idioma Inglés Básico",
+    "softSkillsHeading": "Habilidades Blandas",
+    "softSkill1": "Trabajo en equipo",
+    "softSkill2": "Adaptabilidad",
+    "softSkill3": "Ética",
+    "softSkill4": "Responsabilidad",
+    "contactHeading": "Contacto",
+    "phone": "Teléfono",
+    "phoneNumber": "6435 5641",
+    "email": "Email",
+    "emailAddress": "navarropaolo2020@gmail.com",
+    "location": "Ubicación",
+    "locationValue": "Ciudad Arce, La Libertad, El Salvador",
+    "githubLink": "https://github.com/PaoloNavarro",
+    "githubUser": "PaoloNavarro",
+    "experienceHeading": "Experiencia",
+    "idgDates": "2024-2025",
+    "idgRole": "Desarrollador Fullstack - Idigital Studios",
+    "idgDuty1": "Desarrollo de soluciones a medida para rubros como ferreterías, universidades y comercios.",
+    "idgDuty2": "Integración de pasarelas de pago, clientes SMTP y APIs REST.",
+    "idgDuty3": "Desarrollo con Laravel, consumo de APIs en React, y maquetado con WordPress + Elementor.",
+    "idgDuty4": "Creación de plugins personalizados en WordPress y optimización de WooCommerce.",
+    "idgDuty5": "Trabajo bajo metodologías ágiles (Scrum).",
+    "idgDuty6": "Manejo de bases de datos relacionales y no relacionales.",
+    "ferreteriaDates": "2023 - 2024",
+    "ferreteriaRole": "Desarrollador - Ferretería Hernández, Chalchuapa",
+    "ferreteriaDuty1": "Diseño e implementación de un sistema de gestión de inventario y ventas adaptado a las necesidades del negocio.",
+    "ferreteriaDuty2": "Desarrollo backend con Laravel y base de datos MySQL.",
+    "educationHeading": "Educación",
+    "universityDegree": "Ingeniería en Desarrollo de Software",
+    "universityDates": "2020-2024",
+    "coursesHeading": "Cursos",
+    "course1": "Git y GitHub en Platzi",
+    "course1Date": "2022",
+    "course2": "PHP con Laravel en Platzi",
+    "course2Date": "2022"
+  },
+   "contact": {
+    "title": "Contactame",
+    "description": "¡Me encantaría saber de ti! Ya sea que tengas una pregunta, una propuesta de proyecto o simplemente quieras saludar, no dudes en usar el formulario a continuación.",
+    "form": {
+      "name_label": "Tu Nombre",
+      "name_placeholder": "Escribe tu nombre completo",
+      "email_label": "Tu Correo Electrónico",
+      "email_placeholder": "tu.email@example.com",
+      "message_label": "Tu Mensaje",
+      "message_placeholder": "Hola, me gustaría hablar sobre...",
+      "submit_button": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success_message": "¡Mensaje enviado con éxito! Te contactaré pronto.",
+      "error_message": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
+    },
+    "validation": {
+      "name_required": "El nombre es obligatorio.",
+      "email_required": "El correo electrónico es obligatorio.",
+      "email_invalid": "Por favor, introduce un correo electrónico válido.",
+      "message_required": "El mensaje es obligatorio."
+    }
   }
 }

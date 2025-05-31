@@ -20,7 +20,8 @@
     "react-cookie": "^8.0.1",
     "react-dom": "^19.0.0",
     "react-flags-select": "^2.4.0",
-    "react-i18next": "^15.5.2"
+    "react-i18next": "^15.5.2",
+    "simple-icons": "^14.15.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
