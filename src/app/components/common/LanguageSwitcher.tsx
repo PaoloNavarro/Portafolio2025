@@ -3,8 +3,6 @@
 
 import React from 'react'; // Eliminado useState, useRef, useEffect ya que no se usan en este snippet
 import { usePathname, useRouter } from 'next/navigation';
-import { languages } from '@/i18n/settings';
-import clsx from 'clsx';
 import ReactFlagsSelect from 'react-flags-select'; // <-- Importa la nueva librería
 
 const LanguageSwitcher: React.FC = () => {

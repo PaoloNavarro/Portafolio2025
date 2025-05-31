@@ -1,46 +1,17 @@
 // src/app/layout.tsx
 import './globals.css';
-// Importa la función 'dir' y 'languages' de tus settings
-import { dir, languages } from '../i18n/settings';
-import type { Metadata } from 'next';
+import { dir, fallbackLng } from '../i18n/settings';
 
-// Metadatos globales para tu aplicación.
-export const metadata: Metadata = {
-  title: 'Mi Portafolio Profesional',
-  description: 'Portafolio de proyectos profesionales, conceptuales y académicos.',
-};
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Aquí no tienes acceso a params.locale porque no es layout dinámico.
+  // Puedes usar fallbackLng o un valor estático si quieres.
 
-export async function generateStaticParams() {
-  return languages.map((locale) => ({ locale }));
-}
-
-// RootLayout es un Server Component por defecto
-export default async function RootLayout({
-  children,
-  params: { locale } // ¡Aquí SÍ recibes el locale de la URL!
-}: {
-  children: React.ReactNode;
-  params: { locale: string }; // Definimos el tipo para 'locale'
-}) {
-  // Asegúrate de que 'locale' no sea 'undefined' en la URL.
-  // Si la URL es '/', Next.js no pasa un locale a este RootLayout.
-  // Tu `src/app/page.tsx` con `redirect` se encarga de que siempre haya un locale.
-  const currentLocale = locale || languages[0]; // Usa el locale o el fallbackLng
-  const direction = dir(currentLocale); // Usa la función 'dir' con el locale resuelto
-
-  console.log(`RootLayout: Locale detectado: ${currentLocale}, dirección del texto: ${direction}`);
+  const direction = dir(fallbackLng);
 
   return (
-    // ¡Aquí definimos <html> y <body>, y sus atributos!
-    // No debe haber espacios en blanco entre <html><head><body>.
-    <html lang={currentLocale} dir={direction}>
-      <head>
-        {/* Aquí puedes añadir metadatos adicionales, como títulos específicos del sitio o meta tags */}
-        {/* Los títulos y descripciones de las páginas individuales irán en sus respectivos page.tsx o layout.tsx */}
-      </head>
-      <body>
-        {children} {/* Esto renderizará el LocaleLayout y las páginas */}
-      </body>
+    <html lang={fallbackLng} dir={direction}>
+      <head />
+      <body>{children}</body>
     </html>
   );
 }

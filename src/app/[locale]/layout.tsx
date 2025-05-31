@@ -15,7 +15,7 @@ import { CookiesProvider } from 'react-cookie'; // Importa CookiesProvider
 
 // Define la fuente como lo haces en tu MainLayout
 const montserrat = Montserrat({
-
+  subsets: ['latin'], // 👈 obligatorio si preload está activado
   variable: '--font-montserrat',
 });
 
@@ -25,6 +25,9 @@ export default function LocaleLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  // Si en algún momento quieres usar `params.locale`, ya lo tienes disponible.
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isSearchOpen, setIsSearchOpen] = React.useState(false);
 
