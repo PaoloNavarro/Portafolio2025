@@ -20,9 +20,7 @@ const MenuSlider: React.FC<MenuSliderProps> = ({ isOpen, onClose }) => {
 
   const navLinks = [
     { name: t('header.home'), href: `/${lng}` },
-    { name: t('header.professional'), href: `/${lng}/projects/professional` },
-    { name: t('header.conceptual'), href: `/${lng}/projects/conceptual` },
-    { name: t('header.academic'), href: `/${lng}/projects/academic` },
+    { name: t('header.professional'), href: `/${lng}/professional` },
     { name: t('header.about'), href: `/${lng}/about` },
     { name: t('header.contact'), href: `/${lng}/contact` },
   ];
@@ -39,14 +37,14 @@ const MenuSlider: React.FC<MenuSliderProps> = ({ isOpen, onClose }) => {
 
       {/* Menú Lateral */}
       <aside
-       className={clsx(
-    'fixed top-0 left-0 h-full',
-    'w-full sm:w-80 md:w-96',
-    'bg-[var(--color-background)] shadow-lg transform transition-transform duration-300 ease-in-out',
-    isOpen ? 'translate-x-0' : '-translate-x-full',
-    'z-[9999]', // <- Aquí el cambio
-    'md:hidden'
-  )}
+        className={clsx(
+          'fixed top-0 left-0 h-full',
+          'w-full sm:w-80 md:w-96',
+          'bg-[var(--color-background)] shadow-lg transform transition-transform duration-300 ease-in-out',
+          isOpen ? 'translate-x-0' : '-translate-x-full',
+          'z-[9999]', // <- Aquí el cambio
+          'md:hidden'
+        )}
       >
         <div className="p-6 flex flex-col h-full">
           {/* Botón para cerrar el menú */}
