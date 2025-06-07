@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           {/* Redes sociales con logos */}
           <div className="flex space-x-4">
             <Link
-              href="https://www.linkedin.com/in/paolo-navarro"
+              href="https://www.linkedin.com/in/paolo-isaac-navarro-rosales-2024nr/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all duration-300"
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             </Link>
 
             <Link
-              href="https://github.com/paolo-navarro"
+              href="https://github.com/PaoloNavarro"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-all duration-300"

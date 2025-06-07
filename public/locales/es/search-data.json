@@ -1,0 +1,278 @@
+[
+  {
+    "id": "1",
+    "title": "Página de Inicio",
+    "description": "Esta es la página principal de nuestro sitio web.",
+    "url": "/es",
+    "keywords": ["inicio", "principal", "web", "sitio", "portada"]
+  },
+  {
+    "id": "2",
+    "title": "Proyectos Profesionales",
+    "description": "Explore nuestro portafolio de proyectos de desarrollo profesional.",
+    "url": "/es/professional",
+    "keywords": ["profesionales", "proyectos", "portafolio", "desarrollo", "trabajo"]
+  },
+  {
+    "id": "3",
+    "title": "Sobre Mí",
+    "description": "Conozca más sobre mi trayectoria, habilidades y experiencia.",
+    "url": "/es/about",
+    "keywords": ["sobre mí", "biografía", "habilidades", "experiencia", "perfil"]
+  },
+  {
+    "id": "4",
+    "title": "Contacto",
+    "description": "Póngase en contacto para colaboraciones o consultas.",
+    "url": "/es/contact",
+    "keywords": ["contacto", "consulta", "correo", "teléfono", "comunicación"]
+  },
+  {
+    "id": "tech-java",
+    "type": "technology",
+    "title": "Java",
+    "description": "**Experiencia**: Un lenguaje de programación versátil y orientado a objetos, ampliamente utilizado para aplicaciones empresariales y desarrollo Android. Mi experiencia con Java me permite construir soluciones robustas y escalables.",
+    "url": null,
+    "keywords": ["java", "programación", "backend", "android"]
+  },
+  {
+    "id": "tech-springboot",
+    "type": "technology",
+    "title": "Spring Boot",
+    "description": "**Experiencia**: Un framework construido sobre Spring, que simplifica la creación de aplicaciones Spring autónomas y de calidad de producción. Lo utilizo para desarrollar backends eficientes y de alto rendimiento.",
+    "url": null,
+    "keywords": ["springboot", "spring", "java", "backend", "framework"]
+  },
+  {
+    "id": "tech-php",
+    "type": "technology",
+    "title": "PHP",
+    "description": "**Especialización**: Un lenguaje de scripting de propósito general popular, especialmente adecuado para el desarrollo web. Cuento con una sólida experiencia construyendo soluciones web dinámicas y eficientes con PHP.",
+    "url": null,
+    "keywords": ["php", "web", "backend", "scripting"]
+  },
+  {
+    "id": "tech-laravel",
+    "type": "technology",
+    "title": "Laravel",
+    "description": "**Especialización**: Un robusto framework de aplicaciones web PHP con una sintaxis expresiva y elegante. Lo he empleado extensivamente para el desarrollo rápido y eficiente de aplicaciones web complejas y robustas.",
+    "url": null,
+    "keywords": ["laravel", "php", "framework", "desarrollo web"]
+  },
+  {
+    "id": "tech-js",
+    "type": "technology",
+    "title": "JavaScript (JS)",
+    "description": "**Especialización**: El lenguaje fundamental de la web, esencial para el desarrollo frontend y cada vez más para el backend. Lo utilizo para crear experiencias de usuario interactivas y funcionalidades dinámicas complejas.",
+    "url": null,
+    "keywords": ["javascript", "js", "frontend", "backend", "web"]
+  },
+  {
+    "id": "tech-ts",
+    "type": "technology",
+    "title": "TypeScript (TS)",
+    "description": "**Experiencia**: Un superconjunto de JavaScript que añade tipado estático, mejorando la calidad y escalabilidad del código. Mi uso de TypeScript me permite construir aplicaciones más robustas y fáciles de mantener.",
+    "url": null,
+    "keywords": ["typescript", "ts", "javascript", "tipado estático"]
+  },
+  {
+    "id": "tech-react",
+    "type": "technology",
+    "title": "React",
+    "description": "**Especialización**: Una biblioteca JavaScript declarativa, eficiente y flexible para construir interfaces de usuario. Tengo una vasta experiencia en la creación de componentes reutilizables y UIs dinámicas con React.",
+    "url": null,
+    "keywords": ["react", "frontend", "javascript", "ui", "biblioteca"]
+  },
+  {
+    "id": "tech-react-router",
+    "type": "technology",
+    "title": "React Router",
+    "description": "**Experiencia**: Una biblioteca estándar para el enrutamiento en aplicaciones React. La utilizo para gestionar la navegación de forma fluida y eficiente en mis proyectos.",
+    "url": null,
+    "keywords": ["react router", "react", "enrutamiento", "frontend"]
+  },
+  {
+    "id": "tech-vite",
+    "type": "technology",
+    "title": "Vite",
+    "description": "**Experiencia**: Una herramienta de frontend de próxima generación que ofrece un servidor de desarrollo extremadamente rápido y optimizaciones de construcción. Lo utilizo para acelerar el desarrollo y mejorar el rendimiento.",
+    "url": null,
+    "keywords": ["vite", "frontend", "herramienta de construcción", "javascript", "bundler"]
+  },
+  {
+    "id": "tech-nextjs",
+    "type": "technology",
+    "title": "Next.js",
+    "description": "**Especialización**: Un framework de React para construir aplicaciones web full-stack, habilitando el renderizado del lado del servidor y la generación estática de sitios. Mi expertise en Next.js me permite crear aplicaciones de alto rendimiento y SEO-friendly.",
+    "url": null,
+    "keywords": ["next.js", "nextjs", "react", "fullstack", "ssr", "ssg"]
+  },
+  {
+    "id": "tech-react-native",
+    "type": "technology",
+    "title": "React Native",
+    "description": "**Experiencia**: Un framework para construir aplicaciones móviles nativas usando React. Lo utilizo para desarrollar aplicaciones multiplataforma eficientes para Android e iOS.",
+    "url": null,
+    "keywords": ["react native", "móvil", "multiplataforma", "react", "android", "ios"]
+  },
+  {
+    "id": "tech-wordpress",
+    "type": "technology",
+    "title": "WordPress",
+    "description": "**Experiencia**: Un popular sistema de gestión de contenidos (CMS) para construir sitios web y blogs. He trabajado con WordPress para implementar y personalizar sitios web funcionales.",
+    "url": null,
+    "keywords": ["wordpress", "cms", "blog", "sitio web"]
+  },
+  {
+    "id": "tech-bootstrap",
+    "type": "technology",
+    "title": "Bootstrap",
+    "description": "**Experiencia**: Un popular framework CSS para desarrollar sitios web responsivos y mobile-first. Lo he utilizado para diseñar interfaces de usuario atractivas y adaptables.",
+    "url": null,
+    "keywords": ["bootstrap", "css", "framework", "frontend", "responsivo"]
+  },
+  {
+    "id": "tech-tailwind",
+    "type": "technology",
+    "title": "Tailwind CSS",
+    "description": "**Experiencia**: Un framework CSS 'utility-first' para construir rápidamente diseños personalizados. Lo utilizo para un desarrollo de UI ágil y altamente personalizable.",
+    "url": null,
+    "keywords": ["tailwind", "css", "framework", "frontend", "utility-first"]
+  },
+  {
+    "id": "tech-node",
+    "type": "technology",
+    "title": "Node.js",
+    "description": "**Especialización**: Un entorno de ejecución de JavaScript para construir aplicaciones de red escalables. Lo empleo para desarrollar APIs RESTful y servicios de backend de alto rendimiento y robustez.",
+    "url": null,
+    "keywords": ["node", "nodejs", "javascript", "backend", "entorno de ejecución"]
+  },
+  {
+    "id": "tech-expressjs",
+    "type": "technology",
+    "title": "Express.js",
+    "description": "**Experiencia**: Un framework de aplicación web de Node.js rápido, abierto y minimalista. Lo utilizo para construir APIs RESTful y aplicaciones web robustas.",
+    "url": null,
+    "keywords": ["express.js", "express", "node.js", "backend", "framework"]
+  },
+  {
+    "id": "tech-sequelize",
+    "type": "technology",
+    "title": "Sequelize",
+    "description": "**Especialización**: Un ORM de Node.js basado en promesas para Postgres, MySQL, MariaDB, SQLite y SQL Server. Lo utilizo para una interacción eficiente, segura y optimizada con bases de datos relacionales.",
+    "url": null,
+    "keywords": ["sequelize", "node", "orm", "base de datos"]
+  },
+  {
+    "id": "tech-postgresql",
+    "type": "technology",
+    "title": "PostgreSQL",
+    "description": "**Especialización**: Un potente sistema de base de datos relacional de objetos de código abierto. Tengo amplia experiencia en el diseño, implementación y optimización de bases de datos robustas con PostgreSQL.",
+    "url": null,
+    "keywords": ["postgresql", "postgres", "base de datos", "sql"]
+  },
+  {
+    "id": "tech-firebase",
+    "type": "technology",
+    "title": "Firebase",
+    "description": "**Experiencia**: Una plataforma desarrollada por Google para crear aplicaciones móviles y web, ofreciendo varios servicios de backend. La utilizo para desarrollar aplicaciones con funcionalidades en tiempo real y escalabilidad.",
+    "url": null,
+    "keywords": ["firebase", "backend", "google", "base de datos", "hosting"]
+  },
+  {
+    "id": "tech-solid",
+    "type": "technology",
+    "title": "Principios SOLID",
+    "description": "**Experiencia**: Un conjunto de cinco principios de diseño destinados a hacer que los diseños de software sean más comprensibles, flexibles y mantenibles. Siempre aplico los principios SOLID para escribir código limpio y de alta calidad.",
+    "url": null,
+    "keywords": ["solid", "principios", "diseño de software", "código limpio"]
+  },
+  {
+    "id": "tech-mvc",
+    "type": "technology",
+    "title": "Arquitectura MVC",
+    "description": "**Experiencia**: Modelo-Vista-Controlador, un patrón arquitectónico que separa una aplicación en tres componentes lógicos principales. Tengo amplia experiencia en el diseño y construcción de aplicaciones siguiendo la arquitectura MVC.",
+    "url": null,
+    "keywords": ["mvc", "arquitectura", "patrón de diseño"]
+  },
+  {
+    "id": "tech-ncapas",
+    "type": "technology",
+    "title": "Arquitectura N-Capas",
+    "description": "**Experiencia**: Un patrón arquitectónico donde los componentes se organizan en capas horizontales, cada una desempeñando un papel específico. Lo aplico para crear arquitecturas de software escalables y bien estructuradas.",
+    "url": null,
+    "keywords": ["n-capas", "arquitectura", "diseño de software"]
+  },
+  {
+    "id": "tech-swagger",
+    "type": "technology",
+    "title": "Swagger (OpenAPI)",
+    "description": "**Experiencia**: Una suite de herramientas de código abierto construida alrededor de la especificación OpenAPI, utilizada para diseñar, construir, documentar y consumir APIs RESTful. Lo empleo para crear documentación clara e interactiva de mis APIs.",
+    "url": null,
+    "keywords": ["swagger", "openapi", "documentación API", "RESTful", "api"]
+  },
+  {
+    "id": "tech-soap",
+    "type": "technology",
+    "title": "SOAP (Protocolo)",
+    "description": "**Experiencia**: Un protocolo basado en XML para el intercambio de información en la implementación de servicios web. Tengo experiencia en la interacción y desarrollo de servicios que utilizan el protocolo SOAP.",
+    "url": null,
+    "keywords": ["soap", "servicios web", "xml", "protocolo"]
+  },
+  {
+    "id": "tech-linux",
+    "type": "technology",
+    "title": "Linux",
+    "description": "**Experiencia**: Un sistema operativo de código abierto y ampliamente utilizado para servidores, desarrollo y sistemas embebidos. Poseo experiencia en la administración y configuración de entornos Linux.",
+    "url": null,
+    "keywords": ["linux", "sistema operativo", "servidor", "shell"]
+  },
+  {
+    "id": "tech-iis",
+    "type": "technology",
+    "title": "IIS (Internet Information Services)",
+    "description": "**Experiencia**: El servidor web extensible de Microsoft, utilizado para alojar sitios web y aplicaciones web. Tengo experiencia en la configuración y administración de aplicaciones en entornos IIS.",
+    "url": null,
+    "keywords": ["iis", "servidor web", "microsoft", "windows server"]
+  },
+  {
+    "id": "tech-apache",
+    "type": "technology",
+    "title": "Apache HTTP Server",
+    "description": "**Experiencia**: Un servidor web de código abierto y multiplataforma ampliamente utilizado para alojar sitios web y aplicaciones web. Cuento con experiencia en la configuración y gestión de Apache para el despliegue de proyectos.",
+    "url": null,
+    "keywords": ["apache", "servidor web", "http server", "código abierto"]
+  },
+  {
+    "id": "alt-flutter",
+    "type": "alternative",
+    "title": "Flutter (Alternativa)",
+    "description": "Aunque no me especializo en Flutter, tengo **experiencia sólida con React Native**, que es otro excelente framework para desarrollo móvil multiplataforma y me permite abordar necesidades similares.",
+    "url": null,
+    "keywords": ["flutter", "móvil", "multiplataforma"]
+  },
+  {
+    "id": "alt-net",
+    "type": "alternative",
+    "title": ".NET (Alternativa)",
+    "description": "Aunque no me especializo en .NET, cuento con una **profunda experiencia en desarrollo backend con Java/Spring Boot y Node.js**, que son alternativas robustas y escalables para construir aplicaciones potentes.",
+    "url": null,
+    "keywords": [".net", "dotnet", "c#", "backend", "microsoft"]
+  },
+  {
+    "id": "alt-angular",
+    "type": "alternative",
+    "title": "Angular (Alternativa)",
+    "description": "Aunque no me especializo en Angular, tengo una **amplia y profunda experiencia con React**, una potente biblioteca que me permite construir interfaces de usuario dinámicas y complejas de manera eficiente.",
+    "url": null,
+    "keywords": ["angular", "frontend", "framework"]
+  },
+  {
+    "id": "alt-vuejs",
+    "type": "alternative",
+    "title": "Vue.js (Alternativa)",
+    "description": "Aunque no me especializo en Vue.js, poseo una **extensa experiencia con React**, una potente biblioteca para construir interfaces de usuario dinámicas que me permite adaptarme a diversas necesidades de frontend.",
+    "url": null,
+    "keywords": ["vuejs", "vue.js", "frontend", "framework"]
+  }
+]

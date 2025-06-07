@@ -9,7 +9,14 @@
     "open_search": "Abrir búsqueda",
     "open_menu": "Abrir menú"
   },
- "home": {
+  "search": {
+    "placeholder": "Busca una tecnología o algo en el sitio...",
+    "close": "Cerrar búsqueda",
+    "no_results": "No se encontraron resultados para \"{{query}}\".",
+    "type_to_search": "Escribe para comenzar a buscar..."
+  },
+  "home": {
+    "projects_disclaimer": "*Las imágenes mostradas son de referencia. Por razones de confidencialidad, no se utilizan materiales visuales reales de los proyectos empresariales.*",
     "welcome_title": "Creando Experiencias Digitales, Una Línea a la Vez.",
     "description_part1": "Hola, soy",
     "my_name": "Paolo Navarro",
@@ -20,7 +27,6 @@
     "scalable_architectures": "arquitecturas escalables y eficientes",
     "description_part4": "Mi experiencia abarca",
     "professional_projects": "diversos proyectos profesionales",
-    "open_source_contributions": "contribuciones de código abierto",
     "description_part5": "y la exploración de",
     "emerging_tech_experiments": "tecnologías emergentes innovadoras",
     "view_projects_button": "Explorar Mi Trabajo",
@@ -30,8 +36,8 @@
     "project1_desc": "Desarrollé un sitio de e-commerce multilenguaje en WordPress usando Elementor, incluyendo desarrollo de plugins personalizados e integración con Google Analytics para una empresa italiana. Enfocado en diseño responsivo y experiencia de usuario.",
     "project2_name": "Sistema de Gestión para Ferretería",
     "project2_desc": "Construí un sistema integral para una ferretería que se comunica con una API hecha en Spring Boot, con un frontend en Laravel. Implementé una integración basada en SOAP con la pasarela de pago Cybersource para transacciones seguras.",
-    "project3_name": "Portal de Medios Interactivo",
-    "project3_desc": "Creé un portal de medios multilenguaje desarrollado con Laravel y React (Inertia.js), con un panel administrativo utilizando Tailwind CSS para los estilos. Incorporó elementos interactivos como reproductores de video y carruseles.",
+    "project3_name": "Sitio Promocional para Hotel en la Playa",
+    "project3_desc": "Desarrollé un sitio web multilenguaje para la promoción de un hotel en la playa, utilizando Laravel y React con Inertia.js. El panel administrativo fue construido con Tailwind CSS y permite una gestión sencilla del contenido. El sitio incluye elementos visuales como galerías, carruseles e integración de videos para una experiencia atractiva e inmersiva.",
     "project4_name": "Centro de Admisiones Universitarias",
     "project4_desc": "Diseñé un sitio web informativo para admisiones universitarias usando WordPress y Elementor, incluyendo plugins personalizados, para optimizar el proceso de solicitud y proporcionar información clave.",
     "project5_name": "Marketplace de Fotografía",
@@ -105,8 +111,7 @@
       }
     ]
   },
-
-   "project_detail": {
+  "project_detail": {
     "back_to_projects": "Volver a Proyectos",
     "loading_or_not_found": "Las imagenes del proyecto se están cargando o el proyecto no se encontró...",
     "no_image_available": "No hay imagen disponible",
@@ -115,9 +120,10 @@
     "technologies_title": "Tecnologías Utilizadas",
     "view_live_project": "Ver Proyecto en Vivo"
   },
-   "menu" : {
+  "menu": {
     "navigation_title": "Menu de Navegación"
-  }	, "aboutMe": {
+  },
+  "aboutMe": {
     "title": "Un Vistazo a Mi Trayectoria",
     "summaryHeading": "Resumen Profesional",
     "summaryPart1": "Soy un",
@@ -174,7 +180,7 @@
     "course2": "PHP con Laravel en Platzi",
     "course2Date": "2022"
   },
-   "contact": {
+  "contact": {
     "title": "Contactame",
     "description": "¡Me encantaría saber de ti! Ya sea que tengas una pregunta, una propuesta de proyecto o simplemente quieras saludar, no dudes en usar el formulario a continuación.",
     "form": {

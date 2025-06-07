@@ -1,7 +1,6 @@
 @import "tailwindcss";
 /* src/app/globals.css */
 
-
 /* Define tus variables CSS personalizadas aquí, dentro de un selector como :root */
 :root {
   --color-primary: #015491;
@@ -16,8 +15,18 @@
 
   /* GENERAL TEXT COLORS FOR THEME SWITCHING */
   --color-text: #212529; /* Default text color (dark for light mode) */
+  --color-text-dark: #212529; /* Darker text for main content in light mode */
+  --color-text-light: #6c757d; /* Lighter text for descriptions/secondary info in light mode */
   --color-background: #ffffff; /* Default background color (light for light mode) */
   --color-background-dark: #f8f9fa; /* Slightly darker background for sections in light mode */
+
+  /* Search Component Specific Variables (Light Mode) */
+  --color-background-search-modal: rgba(255, 255, 255, 0.95); /* Semi-transparent white for modal background */
+  --color-border-search: #e0e0e0; /* Light border for the modal */
+  --color-border-input: #ced4da; /* Light border for input */
+  --color-background-input: #ffffff; /* White background for input */
+  --color-background-button-hover: #e9ecef; /* Light hover background for buttons */
+  --color-background-suggestion-hover: #f1f3f5; /* Light hover background for suggestions */
 
 
   /* VARIABLES PARA TEXTOS DESTACADOS */
@@ -45,9 +54,18 @@
 
   /* GENERAL TEXT COLORS FOR THEME SWITCHING IN DARK MODE */
   --color-text: #e0e0e0; /* Text color for dark mode (light) */
+  --color-text-dark: #e0e0e0; /* Lighter text for main content in dark mode */
+  --color-text-light: #a0a0a0; /* Slightly darker light text for dark mode */
   --color-background: #121212; /* Background color for dark mode (dark) */
   --color-background-dark: #1e1e1e; /* Slightly darker background for sections in dark mode */
 
+  /* Search Component Specific Variables (Dark Mode) */
+  --color-background-search-modal: rgba(30, 30, 30, 0.95); /* Semi-transparent dark grey for modal background */
+  --color-border-search: #333333; /* Darker border for the modal */
+  --color-border-input: #444444; /* Darker border for input */
+  --color-background-input: #2a2a2a; /* Darker background for input */
+  --color-background-button-hover: #3a3a3a; /* Darker hover background for buttons */
+  --color-background-suggestion-hover: #222222; /* Darker hover background for suggestions */
 
   /* VARIABLES PARA TEXTOS DESTACADOS EN MODO OSCURO */
   --color-highlight-primary: #82e2ff; /* Brighter primary for dark mode highlights */
@@ -258,4 +276,25 @@ body {
 
 .animate-scale-in {
   animation: scaleIn 0.3s ease-out forwards;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+  height: 8px; /* height of the scrollbar for horizontal */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-background-dark); /* color of the track */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-primary); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 2px solid var(--color-background-dark); /* creates padding around scroll thumb */
+}
+
+/* For Firefox (modern versions) */
+.custom-scrollbar {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: var(--color-primary) var(--color-background-dark); /* thumb and track color */
 }

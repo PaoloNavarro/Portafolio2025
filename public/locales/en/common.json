@@ -9,7 +9,14 @@
     "open_search": "Open search",
     "open_menu": "Open menu"
   },
+  "search": {
+    "placeholder": "Search for a technology...",
+    "close": "Close Search",
+    "no_results": "No results found for \"{{query}}\".",
+    "type_to_search": "Type to start searching..."
+  },
   "home": {
+    "projects_disclaimer": "*The images shown are for reference only. Due to confidentiality, real visual materials from business projects are not displayed.*",
     "welcome_title": "Crafting Digital Experiences, One Line at a Time.",
     "description_part1": "Hi, I'm",
     "my_name": "Paolo Navarro",
@@ -20,7 +27,6 @@
     "scalable_architectures": "scalable and efficient architectures",
     "description_part4": "My experience spans across",
     "professional_projects": "diverse professional projects",
-    "open_source_contributions": "open-source contributions",
     "description_part5": "and exploring",
     "emerging_tech_experiments": "innovative emerging technologies",
     "view_projects_button": "Explore My Work",
@@ -30,8 +36,8 @@
     "project1_desc": "Developed a multi-language WordPress e-commerce site using Elementor, including custom plugin development and Google Analytics integration for an Italian enterprise. Focused on responsive design and user experience.",
     "project2_name": "Retail Management System",
     "project2_desc": "Built a comprehensive retail system connecting to a Spring Boot API, with a Laravel frontend. Implemented a SOAP-based integration with the Cybersource payment gateway for secure transactions.",
-    "project3_name": "Interactive Media Portal",
-    "project3_desc": "Created a multi-language media portal using Laravel and React (Inertia.js), featuring an administrative panel with Tailwind CSS for styling. Incorporated interactive elements like video players and carousels.",
+    "project3_name": "Beachfront Hotel Promotional Website",
+    "project3_desc": "I developed a multilingual website to promote a beachfront hotel, using Laravel and React with Inertia.js. The admin panel was built with Tailwind CSS, allowing for easy content management. The site features visual elements such as galleries, carousels, and video integration to create an engaging and immersive user experience.",
     "project4_name": "University Admissions Hub",
     "project4_desc": "Designed an informative university admissions website using WordPress and Elementor, including custom plugins, to streamline the application process and provide key information.",
     "project5_name": "Photography Marketplace",

@@ -29,16 +29,14 @@ export default function LocaleLayout({
   // Si en algún momento quieres usar `params.locale`, ya lo tienes disponible.
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
 
   return (
     // ¡ENVOLVEMOS TODO CON COOKIESPROVIDER!
     <CookiesProvider>
       <div className={clsx('min-h-screen flex flex-col antialiased', montserrat.variable)}>
-        <Header onToggleMenu={toggleMenu} onToggleSearch={toggleSearch} />
+        <Header onToggleMenu={toggleMenu}  />
 
         {/* Renderiza el MenuSlider, pasándole el estado y la función para cerrarlo */}
         <MenuSlider isOpen={isMenuOpen} onClose={toggleMenu} />

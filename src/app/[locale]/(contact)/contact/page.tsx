@@ -107,9 +107,8 @@ const ContactSection: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
           className="relative p-6 rounded-xl border bg-[var(--color-background-card)] border-[var(--color-background-card)] shadow-lg
-                     group hover:border-transparent hover:shadow-xl transition-all duration-300
-                     hover:bg-gradient-to-br from-[var(--color-background-card)] to-[var(--color-background-card)]
-                     overflow-hidden animated-border-box"
+                     group  hover:shadow-xl transition-all duration-300
+                     overflow-hidden "
         >
           <motion.p variants={itemVariants} className="text-lg md:text-xl leading-relaxed text-[var(--color-text)] text-center mb-8">
             {t('contact.description')}

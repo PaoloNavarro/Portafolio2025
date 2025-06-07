@@ -23,6 +23,7 @@ export default function Home() {
   const { t } = useTranslation(lng, 'common');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const openModal = (imageIndex: number) => {
     setSelectedImage(projectImages[imageIndex]);
@@ -34,6 +35,13 @@ export default function Home() {
     setIsModalOpen(false);
     document.body.style.overflow = 'auto';
   };
+
+  const toggleShowAllProjects = () => {
+    setShowAllProjects(!showAllProjects);
+  };
+
+  // Determine which projects to show based on state
+  const projectsToShow = showAllProjects ? projectImages : projectImages.slice(0, 4);
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center p-4 sm:p-6 md:p-10 lg:p-24 overflow-hidden">
@@ -84,8 +92,8 @@ export default function Home() {
             <span className="highlight-secondary font-bold">{t('home.software_engineer')}</span> {t('home.description_part2')}{' '}
             <span className="highlight-primary font-bold">{t('home.full_stack_dev')}</span> {t('home.description_part3')}{' '}
             <span className="highlight-secondary font-bold">{t('home.scalable_architectures')}</span>. {t('home.description_part4')}{' '}
-            <span className="highlight-primary font-bold">{t('home.professional_projects')}</span>,{' '}
-            <span className="highlight-secondary font-bold">{t('home.open_source_contributions')}</span> {t('home.description_part5')}{' '}
+            <span className="highlight-primary font-bold">{t('home.professional_projects')}</span>{' '}
+            {t('home.description_part5')}{' '}
             <span className="highlight-primary font-bold">{t('home.emerging_tech_experiments')}</span>.
           </p>
         </div>
@@ -97,8 +105,15 @@ export default function Home() {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-[var(--color-text)] mb-8">
             {t('home.projects_intro')}
           </p>
+          <p className="text-xs sm:text-sm text-gray-400 italic text-center mb-6">
+            {t('home.projects_disclaimer', {
+              defaultValue:
+                '*Las imágenes mostradas son de referencia. Por razones de confidencialidad, no se utilizan materiales visuales reales de los proyectos empresariales.*',
+            })}
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-            {[...Array(8)].map((_, index) => (
+            {projectsToShow.map((_, index) => (
               <div key={index} className="project-card bg-[var(--color-background-dark)]/[0.9] p-6 rounded-2xl shadow-lg border border-[var(--color-background-dark)] transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl flex flex-col items-center">
                 <div
                   className="relative w-full h-48 mb-4 rounded-lg overflow-hidden flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
@@ -123,6 +138,31 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Flecha animada para mostrar/ocultar proyectos */}
+          <button
+            onClick={toggleShowAllProjects}
+            className="mt-8 mx-auto flex flex-col items-center justify-center focus:outline-none group"
+            aria-label={showAllProjects ? t('home.view_less_button') : t('home.view_more_button')}
+          >
+            <div className={`w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-110 ${showAllProjects ? 'rotate-180' : ''}`}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <span className="sr-only">{showAllProjects ? t('home.view_less_button') : t('home.view_more_button')}</span>
+          </button>
         </div>
 
         <div className="flex flex-col items-center space-y-8 mt-12 animate-fade-in-up delay-300">
