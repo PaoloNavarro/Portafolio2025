@@ -44,36 +44,38 @@ export default function Home() {
     <main className="relative flex min-h-screen flex-col items-center justify-center p-8 md:p-24 overflow-hidden">
       {/* Image Modal */}
       {isModalOpen && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 backdrop-blur-sm transition-opacity duration-300 animate-fade-in"
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity duration-300 animate-fade-in"
           onClick={closeModal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
         >
-          <div 
+          <div
             className="relative max-w-4xl w-full mx-4 max-h-[90vh]"
-            onClick={(e) => e.stopPropagation()} // Prevent click from bubbling to backdrop
+            onClick={(e) => e.stopPropagation()}
           >
-            <button 
-              className="absolute -top-12 right-0 text-white hover:text-primary text-4xl z-50"
+            <button
+              className="absolute -top-12 right-0 text-white hover:text-primary text-4xl z-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white"
               onClick={closeModal}
               aria-label="Close modal"
             >
               &times;
             </button>
-            <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl animate-scale-in">
               <Image
-                src={selectedImage ?? ''}
+                src={selectedImage || ''}
                 alt="Enlarged project preview"
                 width={1200}
                 height={800}
                 className="object-contain w-full h-full"
                 style={{ maxWidth: '100%', maxHeight: '90vh' }}
+                priority
               />
-            </div>
           </div>
         </div>
       )}
 
-      <div className="relative max-w-5xl mx-auto text-center z-10 p-6 md:p-10 bg-[var(--color-background-dark)]/[0.8] backdrop-blur-md rounded-3xl shadow-2xl border border-[var(--color-background-dark)] transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:shadow-3xl">
+      <div className="relative w-full max-w-5xl mx-auto text-center z-10 p-6 md:p-10 bg-[var(--color-background-dark)]/[0.8] backdrop-blur-md rounded-3xl shadow-2xl border border-[var(--color-background-dark)] transition-all duration-500 ease-in-out transform hover:scale-[1.01] hover:shadow-3xl">
 
         {/* Hero Title Section */}
         <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight animate-fade-in-down">
@@ -108,7 +110,7 @@ export default function Home() {
             {[...Array(8)].map((_, index) => (
               <div key={index} className="project-card bg-[var(--color-background-dark)]/[0.9] p-6 rounded-2xl shadow-lg border border-[var(--color-background-dark)] transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-xl flex flex-col items-center">
                 {/* Clickable Project Image */}
-                <div 
+                <div
                   className="relative w-full h-48 mb-4 rounded-lg overflow-hidden flex items-center justify-center cursor-pointer hover:opacity-90 transition-opacity"
                   onClick={() => openModal(index)}
                 >
