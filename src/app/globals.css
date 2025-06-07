@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* src/app/globals.css */
+
 
 /* Define tus variables CSS personalizadas aquí, dentro de un selector como :root */
 :root {
@@ -15,6 +17,7 @@
   /* GENERAL TEXT COLORS FOR THEME SWITCHING */
   --color-text: #212529; /* Default text color (dark for light mode) */
   --color-background: #ffffff; /* Default background color (light for light mode) */
+  --color-background-dark: #f8f9fa; /* Slightly darker background for sections in light mode */
 
 
   /* VARIABLES PARA TEXTOS DESTACADOS */
@@ -31,8 +34,8 @@
 }
 
 :root.dark {
-  --color-primary: #1a5175;
-  --color-secondary: #0a7d9e;
+  --color-primary: #1a5175; /* A slightly darker primary for dark mode */
+  --color-secondary: #0a7d9e; /* A slightly darker secondary for dark mode */
   --color-primary-hover: #14405a;
   --color-secondary-hover: #086a82;
 
@@ -43,11 +46,12 @@
   /* GENERAL TEXT COLORS FOR THEME SWITCHING IN DARK MODE */
   --color-text: #e0e0e0; /* Text color for dark mode (light) */
   --color-background: #121212; /* Background color for dark mode (dark) */
+  --color-background-dark: #1e1e1e; /* Slightly darker background for sections in dark mode */
 
 
   /* VARIABLES PARA TEXTOS DESTACADOS EN MODO OSCURO */
-  --color-highlight-primary: #82e2ff;
-  --color-highlight-secondary: #0ff;
+  --color-highlight-primary: #82e2ff; /* Brighter primary for dark mode highlights */
+  --color-highlight-secondary: #0ff; /* Brighter secondary for dark mode highlights */
 
   /* NUEVAS VARIABLES PARA GRADIENTE DEL FOOTER EN MODO OSCURO */
   --footer-gradient-start: #1e1e1e; /* Consider a slightly darker start */
@@ -109,6 +113,7 @@ header .relative img {
 .animated-border-box {
   position: relative;
   z-index: 0; /* Ensures content is above the pseudo-element border */
+  /* Remove direct background-color and border here if you want it purely from the pseudo-element or parent */
 }
 
 .animated-border-box::before {
@@ -143,4 +148,114 @@ header .relative img {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* --- NEW: Global Animations for Page Entry & Background Blobs --- */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply specific delays for sequence */
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+
+/* Blob Animations */
+@keyframes blob-pulse {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+  25% {
+    transform: scale(1.05) translate(10px, -5px);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+  75% {
+    transform: scale(0.95) translate(-10px, 5px);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+}
+
+@keyframes blob-pulse-slow {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1) translate(15px, 10px);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+}
+
+.animate-blob-pulse {
+  animation: blob-pulse 8s infinite ease-in-out; /* Faster pulse */
+}
+
+.animate-blob-pulse-slow {
+  animation: blob-pulse-slow 12s infinite ease-in-out; /* Slower pulse */
+}
+
+/* Ensure background color is applied */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
 }
