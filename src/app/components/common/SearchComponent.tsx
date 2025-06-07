@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import clsx from 'clsx';
 import { useTranslation } from '@/i18n/client';
 import { usePathname } from 'next/navigation';
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks/useTheme'; // Keep this import if useTheme() is called elsewhere or needed in the future
 
 interface SearchItem {
     id: string;
@@ -31,7 +31,11 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ isOpen, onClose }) =>
     const lng = pathname.split('/')[1];
     const { t } = useTranslation(lng, 'common');
 
-    const { theme } = useTheme();
+    // ESLint Error Fix 1: 'theme' is assigned a value but never used.
+    // Since 'theme' isn't used in this component, you can remove it from destructuring.
+    // If you plan to use it later, you'll need to integrate it into your JSX or logic.
+    // For now, we'll remove it to resolve the error.
+    useTheme(); // Calling the hook, but not destructuring 'theme' if it's unused.
 
     useEffect(() => {
         const fetchSearchData = async () => {
@@ -169,15 +173,15 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ isOpen, onClose }) =>
                 {query.length > 1 && suggestions.length > 0 && (
                     <div className="mt-4 max-h-80 overflow-y-auto custom-scrollbar">
                         {suggestions.map((item) => {
-                            // Determine if it's a link or just information
                             const isLink = typeof item.url === 'string' && item.url !== '';
-                            const Tag = isLink ? 'a' : 'div'; // Use 'a' for links, 'div' for info
+                            // ESLint Error Fix 2: 'Tag' is assigned a value but never used.
+                            // Use 'Tag' directly as the component, and conditionally apply props.
+                            const Tag = isLink ? 'a' : 'div';
 
-                            return isLink ? (
-                                <a
+                            return (
+                                <Tag
                                     key={item.id}
-                                    href={item.url as string}
-                                    onClick={onClose}
+                                    {...(isLink && { href: item.url as string, onClick: onClose })}
                                     className={clsx(
                                         "block p-3 rounded-md cursor-pointer transition-colors duration-200",
                                         "hover:bg-[var(--color-background-suggestion-hover)]",
@@ -195,28 +199,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ isOpen, onClose }) =>
                                         "text-sm mt-1",
                                         "text-[var(--color-text-light)]"
                                     )}>{item.description}</p>
-                                </a>
-                            ) : (
-                                <div
-                                    key={item.id}
-                                    className={clsx(
-                                        "block p-3 rounded-md cursor-pointer transition-colors duration-200",
-                                        "hover:bg-[var(--color-background-suggestion-hover)]",
-                                        item.type === 'technology' && 'border-l-4 border-[var(--color-primary)]',
-                                        item.type === 'alternative' && 'border-l-4 border-[var(--color-secondary)]'
-                                    )}
-                                >
-                                    <h3 className={clsx(
-                                        "text-lg font-semibold",
-                                        item.type === 'technology' && 'text-[var(--color-primary)]',
-                                        item.type === 'alternative' && 'text-[var(--color-secondary)]',
-                                        item.type === 'page' && 'text-[var(--color-text-dark)]'
-                                    )}>{item.title}</h3>
-                                    <p className={clsx(
-                                        "text-sm mt-1",
-                                        "text-[var(--color-text-light)]"
-                                    )}>{item.description}</p>
-                                </div>
+                                </Tag>
                             );
                         })}
                     </div>
